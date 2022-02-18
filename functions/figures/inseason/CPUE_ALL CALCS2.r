@@ -1,3 +1,5 @@
+## function to calculate and plot raw CPUE
+
 CPUE_ALL<-function(username="",password="",OBS_SP_CODE=202, TRIP_TAR_CODE="'C'",SPECIES_GRP_CODE="'PCOD'"){
 	require(RODBC)
 	require(data.table)
