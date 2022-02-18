@@ -57,7 +57,7 @@ Plot_CUMMULATIVE<-function(username1="",password1="",species="'PCOD'",FMP_AREA="
   cYear<-year(Sys.time())
 
   d<- ggplot(data=W1,aes(x=WEEK,y=CUM,color=factor(YEAR)))
-  d<- d+geom_point()+geom_path(aes(group=YEAR))+geom_line(data=W1[FMP_SUBAREA=="BS"&YEAR==cYear],color="black",size=1)
+  d<- d+geom_point()+geom_path(aes(group=YEAR))+geom_line(data=W1[YEAR==cYear],color="black",size=1)
   d<-d+facet_wrap(~FMP_GEAR,scale="free_y")
   d<-d+theme_bw()+theme(axis.text.x = element_text(hjust=0, angle = 90))
   d<-d+labs(title=paste0(species," Area = ",FMP_AREA," Subarea = ",subarea), y="Cummulative Catch (t)",color="Year")
