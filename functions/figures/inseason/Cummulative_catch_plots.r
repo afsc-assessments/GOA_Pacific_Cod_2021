@@ -1,9 +1,4 @@
-library(RODBC)
-library(data.table)
-library(ggplot2)
-
-username=""
-password=""
+## Function to plot cummulative catch for species and subarea
 
 Plot_CUMMULATIVE<-function(username1="",password1="",species="'PCOD'",FMP_AREA="'BSAI'",subarea="'BS'",syear=2015)
  {
